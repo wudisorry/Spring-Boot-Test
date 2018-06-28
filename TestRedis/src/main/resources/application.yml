@@ -1,0 +1,24 @@
+datasource: 
+ main: 
+  driverClassName: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@192.168.1.108:1521:orcl
+  username: arh
+  password: 123
+  maxTotal: 200
+  maxIdle: 8
+  minIdle: 8
+  initialSize: 10
+  maxWaitMillis: 3000
+  validationQuery: select 1 from dual
+  testWhileIdle: true
+  testOnBorrow: false
+  testOnReturn: false
+
+spring:
+  redis:
+    hostName: 192.168.1.108
+    port: 6379
+
+ 
+mybatis:
+    config-location: classpath:mybatis-config.xml

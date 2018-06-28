@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >  
+<mapper namespace="com.arh.dao.IManDao">
+	
+	<resultMap id="Man" type="com.arh.pojo.Man">
+		<id column="myId" property="myId" />
+		<result column="myDate" property="myDate" />
+		<result column="info" property="info" />
+	</resultMap>
+
+
+	<insert id="insert" parameterType="com.arh.pojo.Man">
+		insert into tbMan (myId,myDate,info) values (seq_tbman.nextval,#{myDate},#{info})
+	</insert>
+	
+	<select id="selectManByInfo" parameterType="java.lang.String" resultMap="Man">
+		select * from tbMan where info = #{XX}
+	</select>
+</mapper>
