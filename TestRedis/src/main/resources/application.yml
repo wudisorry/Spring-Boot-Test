@@ -14,10 +14,14 @@ datasource:
   testOnBorrow: false
   testOnReturn: false
 
-spring:
-  redis:
-    hostName: 192.168.1.108
-    port: 6379
+
+redis: 
+ hostName: 192.168.1.108
+ port: 6379
+ pool: 
+  maxTotal: 6
+  maxIdle: 6
+  minIdle: 0
 
  
 mybatis:
