@@ -7,6 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+//Used to operate main database
 public abstract class MainGenericDaoImpl<T extends Serializable> extends GenericDaoImpl<T> {
 
 	@Autowired

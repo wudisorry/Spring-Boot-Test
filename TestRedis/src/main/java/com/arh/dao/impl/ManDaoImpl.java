@@ -24,7 +24,7 @@ public class ManDaoImpl extends MainGenericDaoImpl<Man> implements IManDao {
 
 	@Override
 	public void throwDaoException() throws DaoException {
-		throw new DaoException("故意的");
+		throw new DaoException("Artificially throwing an exception");
 	}
 
 }
